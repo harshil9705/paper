@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="shortcut icon" href="img/pngegg.png" type="image/x-icon">
     <title>paper product</title>
+    
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         @import url(css/style.css);
         @import url(css/media.css);
@@ -55,7 +58,7 @@
     <section class="banner-bg">
         <div class="banner-img"></div>
         <div class="container">
-            <div class="swiper banner-slider">
+            <div class="swiper banner-slider" data-aos="zoom-in" data-aos-duration="2000">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="img/slider4.jpg" alt="">
@@ -69,13 +72,15 @@
     </section>
 
     <!-- catagory-section -->
-    <section class="catagory padding-50">
+    <section class="catagory" style="padding: 100px 0px;">
         <div class="container">
             <div class="swiper Category-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" >
                         <div class="catagory-bg">
-                            <div class="catagory-box">
+                            <div class="catagory-box" >
                                 <div class="category-img-box">
                                     <img src="img/tfo-paper-tube-500x500.png" alt="">
                                 </div>
@@ -83,7 +88,9 @@
                         </div>
 
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
                         <div class="catagory-bg">
                             <div class="catagory-box">
                                 <div class="category-img-box">
@@ -143,7 +150,9 @@
     <section class="trending-products padding-50 bg-dark">
         <div class="container">
             <div class="heading">
-                <h4 class="pt">Our Products</h4>
+                <h4 class="pt" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">Our Products</h4>
             </div>
             <div class="swiper trending-slider">
                 <div class="swiper-wrapper">
@@ -396,7 +405,13 @@
     <!-- slider -->
     <script src="js/swiper-bundle.min.js"></script>
 
-
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS
+    </script>
+    <!-- smooth scrolling -->
+ 
     <!-- header -->
     <script>
         $(window).scroll(function () {
