@@ -42,13 +42,13 @@
                                 </ul>
                             </div>
                         </li>
-
+                     
                         <li><a href="process.html">process</a></li>
                         <li><a href="certificate.html">certification</a></li>
                         <li><a href="contact.html">contact us</a></li>
                     </ul>
                 </nav>
-                <div class="icon" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                <div class="icon">
                     <i class="ri-menu-line toggle"></i>
                 </div>
             </div>
@@ -262,7 +262,7 @@
                 <div class="col-lg-6 col-md-12 col-xs-12" data-aos="fade-up" data-aos-duration="1200">
                     <div class="plant-50">
                         <div class="inner-1" data-aos="zoom-in" data-aos-delay="200">
-                            <a><img src="img/yarn fainal.jpg" alt=""></a>
+                            <a><img src="img/home 1.png" alt=""></a>
                         </div>
                         <div class="inner-2" data-aos="slide-up" data-aos-delay="400">
                             <div>
@@ -275,7 +275,7 @@
                 <div class="col-lg-6 col-md-12 col-xs-12" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
                     <div class="plant-50">
                         <div class="inner-1" data-aos="zoom-in" data-aos-delay="500">
-                            <a><img src="img/PAPER_CONE.png" alt=""></a>
+                            <a><img src="img/home 2.png" alt=""></a>
                         </div>
                         <div class="inner-2" data-aos="slide-up" data-aos-delay="700">
                             <div>
@@ -435,6 +435,26 @@
                 clickable: true,
             },
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure no horizontal scroll
+            document.body.style.overflowX = 'hidden';
+            document.documentElement.style.overflowX = 'hidden';
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                document.querySelector("header").classList.add("fixed");
+            } else {
+                document.querySelector("header").classList.remove("fixed");
+            }
+        });
+
+        // Mobile menu toggle
+        // document.querySelector('.toggle').addEventListener('click', function() {
+        //     document.querySelector('header nav ul').classList.toggle('show');
+        // });
     </script>
     <!-- Category-slider -->
     <script>

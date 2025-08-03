@@ -38,20 +38,23 @@
     font-size: 30px;
   }
 
-  .latest-heading{
+  .latest-heading {
     font-size: 30px;
   }
-  .latest-heading-2{
+  .latest-heading-2 {
     font-size: 18px;
   }
-  .latest-description{
+  .latest-description {
     font-size: 16px;
   }
 
-  .plant .plant-50 .inner-2 h3{
+  .plant .plant-50 .inner-2 {
+    left: 20px;
+  }
+  .plant .plant-50 .inner-2 h3 {
     font-size: 20px;
   }
-  .btn-2{
+  .btn-2 {
     padding: 5px 16px;
     font-size: 14px;
   }
@@ -139,20 +142,23 @@
     font-size: 38px;
   }
 
-  .latest-heading{
+  .latest-heading {
     font-size: 37px;
   }
-  .latest-heading-2{
+  .latest-heading-2 {
     font-size: 22px;
   }
-  .latest-description{
+  .latest-description {
     font-size: 17px;
   }
 
-  .plant .plant-50 .inner-2 h3{
+  .plant .plant-50 .inner-2 {
+    left: 55px;
+  }
+  .plant .plant-50 .inner-2 h3 {
     font-size: 24px;
   }
-  .btn-2{
+  .btn-2 {
     padding: 7px 30px;
     font-size: 16px;
   }
@@ -237,13 +243,13 @@
     font-size: 40px;
   }
 
-  .latest-heading{
+  .latest-heading {
     font-size: 40px;
   }
-  .latest-heading-2{
+  .latest-heading-2 {
     font-size: 22px;
   }
-  .latest-description{
+  .latest-description {
     font-size: 18px;
   }
 }
@@ -327,7 +333,6 @@
     font-size: 14px;
     padding: 12px 30px;
   }
-
 }
 
 @media (min-width: 1200px) {
