@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="shortcut icon" href="img/pngegg.png" type="image/x-icon">
     <title>paper product</title>
-
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8BY91YHVE"></script>
     <script>
@@ -18,7 +19,8 @@
         gtag('config', 'G-B8BY91YHVE');
     </script>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
+    <!-- AOS CSS -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">-->
     <link href="./css/aos.css" rel="stylesheet">
     <style>
         @import url(css/style.css);
@@ -27,12 +29,10 @@
 </head>
 
 <body>
-
-    <!-- header -->
     <!-- backtotop -->
     <a href="#" title="top" class="backtotop">
         <i class="ri-arrow-up-s-line"></i>
-    </a>
+    </a> 
     <header>
         <div class="container">
             <div class="row justify-content-between align-center">
@@ -65,36 +65,7 @@
             </div>
         </div>
     </header>
-    <!-- new -->
-    <section>
-        <div class="padding-50">
-            <div class="hero-section-3">
-                <div class="overlay-3"></div>
-                <h2 class="subtitle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="700">Manufacturer &
-                    Exporters of Paper Yarn Cones ( Textile Paper Cones ), Paper Tubes</h2>
-                <h1 class="main-title" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="500">Certificate</h1>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- main-part -->
-    <section class="certificates padding-50">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12 col-xs-12 center" style="text-align: center; width: 65% !important;"
-                    data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
-                    <div class="certificate-box">
-                        <img src="img/certi.png" alt="D&B Certification" style="width: 100%;" data-aos="zoom-in-left"
-                            data-aos-duration="1000" data-aos-delay="500">
-                        <p class="certificate-text">In Process</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- footer -->
-    <!-- footer -->
+    <!-- +91  -->
     <footer class="bg-footer">
         <div class="container">
             <div class="footer-top text-center" data-aos="fade-up" data-aos-duration="800">
@@ -166,189 +137,15 @@
         </div>
     </footer>
 
+
     <!-- script -->
     <script src="js/jquery-3.7.0.min.js"></script>
     <!-- slider -->
     <script src="js/swiper-bundle.min.js"></script>
 
     <!-- AOS JS -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>-->
     <script src="./js/aos.js"></script>
     <script>
         AOS.init(); // Initialize AOS
-
-        var swiper = new Swiper(".banner-slider", {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Ensure no horizontal scroll
-            document.body.style.overflowX = 'hidden';
-            document.documentElement.style.overflowX = 'hidden';
-        });
     </script>
-    <!-- header -->
-    <script>
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 400) {
-                $("header").addClass("fixed");
-            }
-            else {
-                $("header").removeClass("fixed");
-            }
-        })
-    </script>
-    <!-- toggle -->
-    <script>
-        $(document).ready(function () {
-            $(".toggle").click(function () {
-                $("header nav ul").toggleClass("show");
-            })
-        })
-    </script>
-    <!-- banner-slider -->
-    <script>
-        var swiper = new Swiper(".banner-slider", {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
-    <!-- Category-slider -->
-    <script>
-        var swiper = new Swiper(".Category-slider", {
-            breakpoints: {
-                540: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                },
-                767: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                },
-                1200: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                }
-            }
-        });
-    </script>
-    <!-- Trending-slider -->
-    <script>
-        var swiper = new Swiper(".trending-slider", {
-            pagination: {
-                el: ".testimonial-pagination",
-                dynamicBullets: true,
-            },
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                600: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
-                // when window width is >= 480px
-                750: {
-                    slidesPerView: 4,
-                    spaceBetween: 30
-                },
-            }
-        });
-    </script>
-    <!-- testimonial-slider -->
-    <script>
-        var swiper = new Swiper(".testimonial-slider", {
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: true,
-            },
-            pagination: {
-                el: ".testimonial-pagination",
-                dynamicBullets: true,
-            },
-        });
-    </script>
-    <!-- manufacture-slider -->
-    <script>
-        var swiper = new Swiper(".manufacture-slider", {
-            loop: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: true,
-            },
-            //   slidesPerView: 1,
-            //   spaceBetween: 30,
-            //   loop: true,
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 15
-                },
-                // when window width is >= 480px
-                480: {
-                    slidesPerView: 3,
-                    spaceBetween: 15
-                },
-                // when window width is >= 640px
-                600: {
-                    slidesPerView: 3,
-                    spaceBetween: 5
-                },
-                770: {
-                    slidesPerView: 4,
-                    spaceBetween: 5
-                },
-                1140: {
-                    slidesPerView: 5,
-                    spaceBetween: 15
-                },
-                1200: {
-                    slidesPerView: 6,
-                    spaceBetween: 15
-                },
-            }
-        });
-    </script>
-    <!-- latest-slider -->
-    <script>
-        var swiper = new Swiper(".latest-slider", {
-            pagination: {
-                el: ".testimonial-pagination",
-                dynamicBullets: true,
-            },
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                },
-                // when window width is >= 480px
-                480: {
-                    slidesPerView: 1,
-                    spaceBetween: 30
-                },
-                // when window width is >= 640px
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                }
-            }
-        });
-    </script>
-</body>
-
-</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details - Shivam Paper Products</title>
+
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- For Markdown rendering -->
+
+    <style>
+        .blog-post-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .blog-featured-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post-title {
+            font-size: 42px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            gap: 20px;
+            color: #785437;
+            font-size: 14px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .blog-content {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .blog-content h2 {
+            color: #785437;
+            margin-top: 40px;
+        }
+
+        .blog-content blockquote {
+            background: #f7f7f7;
+            border-left: 5px solid #b78f6e;
+            padding: 15px 20px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .blog-cta {
+            background: linear-gradient(135deg, #785437 0%, #b78f6e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            margin: 50px 0;
+            border-radius: 10px;
+        }
+
+        .blog-cta h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .blog-cta p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .back-to-blog {
+            display: inline-block;
+            color: #785437;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .back-to-blog:hover {
+            color: #b78f6e;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-title {
+                font-size: 30px;
+            }
+
+            .blog-featured-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify-content-between align-center">
+                <div class="logo">
+                    <a href="../index.html"><img src="../img/bglogo-1.png" alt=""></a>
+                </div>
+                <nav>
+                    <ul class="row pt">
+                        <li><a href="../index.html">home</a></li>
+                        <li><a href="../about.html">about us</a></li>
+                        <li><a>products</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="../paperyarn.html">paper yarn cones</a></li>
+                                    <li><a href="../papertube.html">paper tube</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="../process.html">process</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="../certificate.html">certification</a></li>
+                        <li><a href="../contact.html">contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="icon">
+                    <i class="ri-menu-line toggle"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section>
+        <div class="padding-50">
+            <div class="hero-section-about">
+                <div class="overlay"></div>
+                <h2 class="subtitle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="700">
+                    Insights & Updates from the World of Paper Products
+                </h2>
+                <h1 class="main-title" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="500">OUR BLOG</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="blog-post-container" id="blog-container">
+            <a href="blog.html" class="back-to-blog"><i class="ri-arrow-left-line"></i> Back to Blog</a>
+            <div id="blog-content-area">
+                <h1 class="blog-post-title" id="blog-title"></h1>
+                <div class="blog-post-meta" id="blog-meta"></div>
+                <img id="blog-image" class="blog-featured-image" alt="Blog Image">
+                <div class="blog-content" id="blog-content"></div>
+                <div class="blog-cta" id="blog-cta" style="display:none;">
+                    <h3 id="cta-title"></h3>
+                    <p id="cta-text"></p>
+                    <a href="../contact.html" class="blog-cta-button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-footer">
+        <div class="container">
+            <div class="footer-top text-center" data-aos="fade-up" data-aos-duration="800">
+                <div class="icon-box text-center">
+                    <div class="icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+                        <a href="https://www.facebook.com/shivam.paper.products?mibextid=ZbWKwL" target="_blank">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                    </div>
+                    <div class="icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+                        <a href="https://www.instagram.com/shivampaperproductss?igsh=Y3l6bHlvdTViOXJ5" target="_blank">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                    <div class="icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+                        <a href="https://www.linkedin.com/in/shivam-paper-products-6776b5354" target="_blank">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                    <div class="icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+                        <a href="https://wa.me/message/C2MTEXTZIJY3F1" target="_blank">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-center text-center">
+                <div class="row justify-content-center">
+                    <div class="footer-center-content col-lg-4 col-md-12 col-12" data-aos="zoom-in-right"
+                        data-aos-duration="800" data-aos-delay="100">
+                        <h5 class="pt">Information</h5>
+                        <p class="footer-p">SHIVAM PAPER PRODUCTS, we specialize in high-quality, sustainable paper
+                            solutions. With advanced technology and strict quality controls, we produce paper yarn
+                            cones, tubes, and cores that exceed industry standards.</p>
+                    </div>
+                    <div class="footer-center-content col-lg-4 col-md-12 col-12" data-aos="zoom-in"
+                        data-aos-duration="800" data-aos-delay="200">
+                        <h5 class="pt">Contact Info</h5>
+                        <ul class="roboto">
+                            <li class="site">
+                                <i class="ri-map-pin-2-fill"></i>
+                                <a>URJA INDUSTRIAL AREA, PLOT NO 5A+6A+7A, SHED NO 6, At. Chhapra, Ta.LODHIKA
+                                    Dist.Rajkot, Gujarat, 360021</a>
+                            </li>
+                            <li class="site">
+                                <i class="ri-phone-fill"></i>
+                                <a>+91 7201913153</a>
+                            </li>
+                            <li class="site">
+                                <i class="ri-phone-fill"></i>
+                                <a>+91 9426444445</a>
+                            </li>
+                            <li class="site">
+                                <i class="ri-mail-fill"></i>
+                                <a>info@shivampaperproducts.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-center-content col-lg-4 col-md-12 col-12" data-aos="zoom-in-left"
+                        data-aos-duration="800" data-aos-delay="300">
+                        <h5 class="pt">Information</h5>
+                        <ul class="roboto">
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../paperyarn.html">Paper Yarn Cones</a></li>
+                            <li><a href="../papertube.html">Paper Tubes</a></li>
+                            <li><a href="../process.html">Process</a></li>
+                            <li><a href="../certificate.html">Certificates</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <script>
+        async function loadBlogDetail() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const blogId = urlParams.get('id');
+
+            if (!blogId) {
+                document.getElementById('blog-content-area').innerHTML = "<p>Blog not found.</p>";
+                return;
+            }
+
+            try {
+                const response = await fetch('../blogs.json'); // Path to your JSON file
+                const data = await response.json();
+                const blog = data.blogs.find(b => b.id === blogId);
+
+                if (!blog) {
+                    document.getElementById('blog-content-area').innerHTML = "<p>Blog not found.</p>";
+                    return;
+                }
+
+                document.title = blog.title + " - Shivam Paper Products";
+                document.getElementById('blog-title').innerText = blog.title;
+                document.getElementById('blog-meta').innerHTML = `
+          <span><i class="ri-calendar-line"></i> ${new Date(blog.date).toDateString()}</span>
+          <span><i class="ri-time-line"></i> ${blog.readTime}</span>
+          <span><i class="ri-user-line"></i> ${blog.author}</span>
+        `;
+                document.getElementById('blog-image').src = blog.image;
+                document.getElementById('blog-content').innerHTML = marked.parse(blog.content);
+
+                // CTA section
+                if (blog.cta) {
+                    document.getElementById('blog-cta').style.display = 'block';
+                    document.getElementById('cta-title').innerText = blog.cta.title;
+                    document.getElementById('cta-text').innerText = blog.cta.text;
+                }
+
+            } catch (err) {
+                console.error('Error loading blog:', err);
+                document.getElementById('blog-content-area').innerHTML = "<p>Error loading blog details.</p>";
+            }
+        }
+
+        loadBlogDetail();
+    </script>
+</body>
+
+</html>

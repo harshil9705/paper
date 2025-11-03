@@ -399,7 +399,7 @@
     transform: scale(1);
     width: auto;
     flex-direction: row;
-    padding-left: 360px;
+    padding-left: 270px;
   }
 
   .testimonial .testimonial-border {
@@ -461,7 +461,7 @@
     max-width: 1320px;
   }
   header nav ul {
-    padding-left: 360px;
+    padding-left: 450px;
   }
   .fixed nav ul {
     padding-left: 0px;
