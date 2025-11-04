@@ -5,108 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Details - Shivam Paper Products</title>
-
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../css/aos.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/media.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- For Markdown rendering -->
+    <link rel="shortcut icon" href="../img/pngegg.png" type="image/x-icon">
+    <title id="page-title">Blog - Shivam Paper Products</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8BY91YHVE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B8BY91YHVE');
+    </script>
+
+    <link href="../css/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <style>
-        .blog-post-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        .blog-featured-image {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .blog-post-title {
-            font-size: 42px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .blog-post-meta {
-            display: flex;
-            gap: 20px;
-            color: #785437;
-            font-size: 14px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .blog-content {
-            font-size: 17px;
-            line-height: 1.8;
-            color: #444;
-        }
-
-        .blog-content h2 {
-            color: #785437;
-            margin-top: 40px;
-        }
-
-        .blog-content blockquote {
-            background: #f7f7f7;
-            border-left: 5px solid #b78f6e;
-            padding: 15px 20px;
-            font-style: italic;
-            color: #555;
-        }
-
-        .blog-cta {
-            background: linear-gradient(135deg, #785437 0%, #b78f6e 100%);
-            color: #fff;
-            text-align: center;
-            padding: 40px;
-            margin: 50px 0;
-            border-radius: 10px;
-        }
-
-        .blog-cta h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .blog-cta p {
-            font-size: 16px;
-            opacity: 0.95;
-        }
-
-        .back-to-blog {
-            display: inline-block;
-            color: #785437;
-            text-decoration: none;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-
-        .back-to-blog:hover {
-            color: #b78f6e;
-        }
-
-        @media (max-width: 768px) {
-            .blog-post-title {
-                font-size: 30px;
-            }
-
-            .blog-featured-image {
-                height: 300px;
-            }
-        }
+        @import url(../css/media.css);
+        @import url(../css/style.css);
     </style>
 </head>
 
 <body>
+    <!-- backtotop -->
+    <a href="#" title="top" class="backtotop">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+    <!-- header -->
     <header>
         <div class="container">
             <div class="row justify-content-between align-center">
@@ -151,22 +77,62 @@
         </div>
     </section>
 
-    <section>
-        <div class="blog-post-container" id="blog-container">
-            <a href="blog.html" class="back-to-blog"><i class="ri-arrow-left-line"></i> Back to Blog</a>
-            <div id="blog-content-area">
-                <h1 class="blog-post-title" id="blog-title"></h1>
-                <div class="blog-post-meta" id="blog-meta"></div>
-                <img id="blog-image" class="blog-featured-image" alt="Blog Image">
-                <div class="blog-content" id="blog-content"></div>
-                <div class="blog-cta" id="blog-cta" style="display:none;">
-                    <h3 id="cta-title"></h3>
-                    <p id="cta-text"></p>
-                    <a href="../contact.html" class="blog-cta-button">Contact Us</a>
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error" class="error-message" style="display: none;">
+        <i class="ri-error-warning-line"></i>
+        <h2>Blog Post Not Found</h2>
+        <p>The blog post you're looking for doesn't exist or has been removed.</p>
+        <a href="blog.html" class="blog-cta-button" style="margin-top: 20px;">Back to Blog</a>
+    </div>
+
+    <!-- Blog Post Content -->
+    <section id="blog-content" class="padding-50" style="display: none;">
+        <div class="blog-post-container">
+            <a href="blog.html" class="back-to-blog" data-aos="fade-right" data-aos-duration="600">
+                <i class="ri-arrow-left-line"></i> Back to Blog
+            </a>
+
+            <article class="blog-post-header">
+                <span id="blog-category" class="blog-post-category" data-aos="fade-up" data-aos-duration="600"></span>
+                <h1 id="blog-title" class="blog-post-title" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="100"></h1>
+                <div class="blog-post-meta" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <span><i class="ri-calendar-line"></i> <span id="blog-date"></span></span>
+                    <span><i class="ri-time-line"></i> <span id="blog-read-time"></span></span>
+                    <span><i class="ri-user-line"></i> <span id="blog-author"></span></span>
                 </div>
+            </article>
+
+            <img id="blog-image" src="" alt="" class="blog-featured-image" data-aos="zoom-in" data-aos-duration="1000">
+
+            <div id="blog-body" class="blog-post-content"></div>
+
+            <!-- CTA Section -->
+            <div id="blog-cta" class="blog-cta" style="display: none;" data-aos="zoom-in" data-aos-duration="1000">
+                <h3 id="cta-title"></h3>
+                <p id="cta-text"></p>
+                <a href="../contact.html" class="blog-cta-button">Contact Us Today</a>
+            </div>
+
+            <!-- Navigation -->
+            <div class="blog-navigation" data-aos="fade-up" data-aos-duration="1000">
+                <a id="prev-post" href="#" class="blog-nav-link prev" style="display: none;">
+                    <span class="blog-nav-label"><i class="ri-arrow-left-line"></i> Previous Post</span>
+                    <span class="blog-nav-title" id="prev-title"></span>
+                </a>
+                <a id="next-post" href="#" class="blog-nav-link next" style="display: none;">
+                    <span class="blog-nav-label">Next Post <i class="ri-arrow-right-line"></i></span>
+                    <span class="blog-nav-title" id="next-title"></span>
+                </a>
             </div>
         </div>
     </section>
+    <!-- footer -->
     <footer class="bg-footer">
         <div class="container">
             <div class="footer-top text-center" data-aos="fade-up" data-aos-duration="800">
@@ -242,55 +208,156 @@
             </div>
         </div>
     </footer>
-    
+
+    <!-- script -->
     <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/aos.js"></script>
-    <script>AOS.init();</script>
 
     <script>
-        async function loadBlogDetail() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const blogId = urlParams.get('id');
+        // Configuration - Update this with your actual path
+        const BLOG_API_URL = 'https://raw.githubusercontent.com/harshil9705/paper/dev-harshil/blogs.json'; // Local path or GitHub raw URL
+
+        // Initialize AOS
+        AOS.init({});
+
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Function to format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+
+        // Function to calculate read time
+        function calculateReadTime(content) {
+            const wordsPerMinute = 200;
+            const wordCount = content.split(/\s+/).length;
+            const minutes = Math.ceil(wordCount / wordsPerMinute);
+            return `${minutes} min read`;
+        }
+
+        // Function to load blog post
+        async function loadBlogPost() {
+            const blogId = getUrlParameter('id');
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const blogContent = document.getElementById('blog-content');
 
             if (!blogId) {
-                document.getElementById('blog-content-area').innerHTML = "<p>Blog not found.</p>";
+                loading.style.display = 'none';
+                error.style.display = 'block';
                 return;
             }
 
             try {
-                const response = await fetch('../blogs.json'); // Path to your JSON file
+                const response = await fetch(BLOG_API_URL);
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch blog data');
+                }
+
                 const data = await response.json();
-                const blog = data.blogs.find(b => b.id === blogId);
+                const blogs = data.blogs || [];
+
+                const blog = blogs.find(b => b.id === blogId);
 
                 if (!blog) {
-                    document.getElementById('blog-content-area').innerHTML = "<p>Blog not found.</p>";
-                    return;
+                    throw new Error('Blog not found');
                 }
 
-                document.title = blog.title + " - Shivam Paper Products";
-                document.getElementById('blog-title').innerText = blog.title;
-                document.getElementById('blog-meta').innerHTML = `
-          <span><i class="ri-calendar-line"></i> ${new Date(blog.date).toDateString()}</span>
-          <span><i class="ri-time-line"></i> ${blog.readTime}</span>
-          <span><i class="ri-user-line"></i> ${blog.author}</span>
-        `;
-                document.getElementById('blog-image').src = blog.image;
-                document.getElementById('blog-content').innerHTML = marked.parse(blog.content);
+                // Update page title
+                document.getElementById('page-title').textContent = `${blog.title} - Shivam Paper Products`;
 
-                // CTA section
+                // Populate blog content
+                document.getElementById('blog-category').textContent = blog.category;
+                document.getElementById('blog-title').textContent = blog.title;
+                document.getElementById('blog-date').textContent = formatDate(blog.date);
+                document.getElementById('blog-read-time').textContent = blog.readTime || calculateReadTime(blog.content);
+                document.getElementById('blog-author').textContent = blog.author || 'Shivam Paper Products';
+
+                const blogImage = document.getElementById('blog-image');
+                blogImage.src = blog.image;
+                blogImage.alt = blog.title;
+                blogImage.onerror = function () {
+                    this.src = '../img/placeholder.jpg';
+                };
+
+                // Parse markdown content using marked.js
+                const contentHtml = marked.parse(blog.content);
+                document.getElementById('blog-body').innerHTML = contentHtml;
+
+                // Set CTA if provided
                 if (blog.cta) {
                     document.getElementById('blog-cta').style.display = 'block';
-                    document.getElementById('cta-title').innerText = blog.cta.title;
-                    document.getElementById('cta-text').innerText = blog.cta.text;
+                    document.getElementById('cta-title').textContent = blog.cta.title || 'Get In Touch';
+                    document.getElementById('cta-text').textContent = blog.cta.text || '';
                 }
 
+                // Setup navigation
+                const currentIndex = blogs.findIndex(b => b.id === blogId);
+
+                // Previous post
+                if (currentIndex > 0) {
+                    const prevBlog = blogs[currentIndex - 1];
+                    const prevPost = document.getElementById('prev-post');
+                    prevPost.href = `blog-detail.html?id=${prevBlog.id}`;
+                    prevPost.style.display = 'block';
+                    document.getElementById('prev-title').textContent = prevBlog.title;
+                }
+
+                // Next post
+                if (currentIndex < blogs.length - 1) {
+                    const nextBlog = blogs[currentIndex + 1];
+                    const nextPost = document.getElementById('next-post');
+                    nextPost.href = `blog-detail.html?id=${nextBlog.id}`;
+                    nextPost.style.display = 'block';
+                    document.getElementById('next-title').textContent = nextBlog.title;
+                }
+
+                // Show content and hide loading
+                loading.style.display = 'none';
+                blogContent.style.display = 'block';
+
+                // Refresh AOS animations
+                AOS.refresh();
+
             } catch (err) {
-                console.error('Error loading blog:', err);
-                document.getElementById('blog-content-area').innerHTML = "<p>Error loading blog details.</p>";
+                console.error('Error loading blog post:', err);
+                loading.style.display = 'none';
+                error.style.display = 'block';
             }
         }
 
-        loadBlogDetail();
+        // Load blog post when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.style.overflowX = 'hidden';
+            document.documentElement.style.overflowX = 'hidden';
+
+            loadBlogPost();
+        });
+
+        // Header scroll effect
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 400) {
+                $("header").addClass("fixed");
+            } else {
+                $("header").removeClass("fixed");
+            }
+        });
+
+        // Toggle menu
+        $(document).ready(function () {
+            $(".toggle").click(function () {
+                $("header nav ul").toggleClass("show");
+            });
+        });
     </script>
 </body>
 
