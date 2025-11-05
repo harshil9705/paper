@@ -404,9 +404,9 @@
             const blogGrid = document.getElementById('blog-grid');
 
             try {
-                // const response = await fetch(BLOG_API_URL);
-                const response = await fetch("https://raw.githubusercontent.com/harshil9705/paper/dev-harshil/blogs.json");
-                // const response = await fetch("../blogs.json");
+               const response = await fetch(BLOG_API_URL);
+                
+                
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch blogs');
